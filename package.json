@@ -25,9 +25,9 @@
     "sass": "^1.23.7"
   },
   "scripts": {
-    "dev": "NODE_ENV=development parcel src/index.html",
-    "build": "NODE_ENV=production parcel build src/index.html --out-dir docs",
-    "clean": "rm -rf dist .cache public"
+    "dev": "NODE_ENV=development parcel src/index.html --out-dir docs",
+    "build": "NODE_ENV=production parcel build src/index.html --public-url ./ --out-dir docs",
+    "clean": "rm -rf docs .cache"
   },
   "postcss": {
     "modules": false,
@@ -45,5 +45,9 @@
   },
   "bugs": {
     "url": "https://davidruvolo51.github.io/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidruvolo51/portfolio.git"
   }
 }
