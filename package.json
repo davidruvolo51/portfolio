@@ -1,5 +1,6 @@
 {
   "name": "davidruvolo51.github.io",
+  "homepage": "https://davidruvolo51.github.io/portfolio/",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -41,5 +42,8 @@
         "flexbox": "no-2009"
       }
     }
+  },
+  "bugs": {
+    "url": "https://davidruvolo51.github.io/portfolio/issues"
   }
 }
