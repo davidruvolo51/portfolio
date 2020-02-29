@@ -1,0 +1,31 @@
+// local variables
+$grid-child-margin: 24px;
+$grid-child-padding: 24px;
+
+// define grid
+.grid {
+	display: grid;
+
+	.grid-child {
+		padding: $grid-child-padding;
+	}
+
+	&.grid-33x3-layout,
+	&.grid-50x2-layout {
+		grid-template-columns: 1fr;
+		row-gap: $grid-child-margin;
+		column-gap: $grid-child-margin;
+	}
+}
+
+@media (min-width: $screen-break) {
+	.grid {
+		&.grid-50x2-layout {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&.grid-33x3-layout {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+}

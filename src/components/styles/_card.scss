@@ -1,0 +1,68 @@
+// local variables for ease
+$card-tags-bg-color: $light;
+$card-date-bg-color: $light;
+$card-link-bg-color: $light;
+$card-link-txt-color: $dark;
+
+// define card style
+.card {
+    padding: 1em;
+    border-radius: 6px;
+    background-color: white;
+
+    // date
+    .card-date {
+        display: block;
+        margin: 0;
+        margin-bottom: 4px;
+        color: $text;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 11pt;
+    }
+    
+    // bottom meta tags
+    .card-meta-tags {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-right: auto;
+
+        li {
+            padding: 0 8px;
+            margin-right: 12px;
+            background-color: $card-tags-bg-color;
+            font-size: 12pt;
+            border-radius: 6px;
+            font-family: 'Courier New', Courier, monospace;
+            
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    
+    // link
+    .card-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 24px;
+        padding: 8px 0;
+        box-shadow: none;
+        font-size: 12pt;
+        border-radius: 6px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: $card-link-txt-color;
+        border: 2px solid $card-link-bg-color;
+        background-color: $card-link-bg-color;
+    }
+}

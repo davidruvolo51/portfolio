@@ -1,0 +1,62 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", Helvetical, sans-serif;
+	cursor: default;
+	font-size: 16pt;
+}
+
+header,
+main,
+footer,
+nav {
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	display: block;
+	color: $dark;
+	line-height: $heading-line-height;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 6px;
+}
+
+p {
+	color: $text;
+	line-height: $body-line-height;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 12px;
+}
+
+li {
+	color: $text;
+	line-height: $heading-line-height;
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+	box-shadow: 0 1px 0 $primary;
+}
+
+button {
+	display: block;
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+img {
+	display: block;
+	width: 100%;
+}

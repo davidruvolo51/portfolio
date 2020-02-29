@@ -1,0 +1,57 @@
+.hero {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	min-height: 70vh;
+	z-index: 1;
+
+	.hero-content {
+		width: 90%;
+		margin: 0 auto;
+		padding: 44px 0;
+		text-align: center;
+
+		h1 {
+			font-size: 24pt;
+			line-height: 1.4;
+		}
+
+		ul {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			list-style: none;
+			padding: 0;
+			margin: 0 auto;
+			
+			li {
+				color: $dark;
+
+				&:not(:last-child)::after {
+					content: "\2022";
+					margin: 0 13px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-break) {
+	.hero {
+		.hero-content {
+			max-width: 972px;
+			margin: 0 auto;
+		}
+
+		&:after {
+			top: 25%;
+			left: -20%;
+		}
+	}
+}
