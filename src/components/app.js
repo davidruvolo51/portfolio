@@ -2,7 +2,7 @@
 // FILE: app.js
 // AUTHOR: David Ruvolo
 // CREATED: 2020-02-29
-// MODIFIED: 2020-02-29
+// MODIFIED: 2020-03-13
 // PURPOSE: functional component for portfolio
 // DEPENDENCIES: react
 // STATUS: working
@@ -10,6 +10,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // BEGIN
 import React, { useEffect, useState } from "react"
+import ReactGA from "react-ga"
 import Header from "./primary/header"
 import Footer from "./primary/footer"
 import Hero from "./layouts/hero"
@@ -19,6 +20,16 @@ import Profile from "./images/profile"
 import Grid from "./layouts/grid"
 import Card from "./elements/card"
 import "../components/styles/index.scss"
+
+// google analytics
+ReactGA.initialize("UA-76117337-12");
+ReactGA.pageview(window.location.pathname);
+ReactGA.timing({
+    category: 'JS Libraries',
+    variable: 'load',
+    value: 20, // in milliseconds
+    label: 'CDN libs'
+  });
 
 // define app
 function app() {
