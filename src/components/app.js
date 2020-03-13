@@ -128,8 +128,10 @@ function app() {
                     <Grid id="projects-layout" layout="33x3">
                         <Card
                             id="project-shiny-contest"
-                            title="Coming soon!"
-                            abstract="I'm developing a shinyapp for the 2020 shiny contest."
+                            title="shinyTravel"
+                            abstract="I built an app for the shiny 2020 contest that provides European travel destinations."
+                            link="https://davidruvolo.shinyapps.io/travel-app/"
+                            linkLabel="View App"
                             keywords={["shiny", "d3"]}
                         />
                         <Card
