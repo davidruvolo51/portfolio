@@ -27,6 +27,7 @@
   "scripts": {
     "dev": "NODE_ENV=development parcel src/index.html --out-dir docs",
     "build": "NODE_ENV=production parcel build src/index.html --public-url ./ --out-dir docs",
+    "serve": "cd docs && python -m SimpleHTTPServer",
     "clean": "rm -rf docs .cache"
   },
   "postcss": {

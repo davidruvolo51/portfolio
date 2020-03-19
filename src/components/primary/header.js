@@ -15,6 +15,7 @@ function Header() {
 	// set states
 	const [isOpen, setMenu] = useState(false);
 
+	
 	// handle window resize for mobile nav
 	const winSize = useWindowSize();
 	useEffect(() => {
@@ -25,7 +26,13 @@ function Header() {
 			}
 		}
 	})
+	
+	// function to handle link clicks and menu toggle
+	function closeMenu() {
+		return isOpen ? setMenu(false) : null;
+	}
 
+	// render
 	return (
 		<nav className="nav" role="navigation">
 			<a to="/" className="nav-item brand-link">
@@ -33,13 +40,13 @@ function Header() {
       			</a>
 			<ul className={`menu nav-item navigation ${isOpen ? "expanded" : ''}`} aria-hidden={isOpen ? null : "true"}>
 				<li className="menu-item">
-					<a className="menu-link" href="#welcome">Welcome</a>
+					<a className="menu-link" href="#welcome" onClick={() => closeMenu()}>Welcome</a>
 				</li>
 				<li className="menu-item">
-					<a className="menu-link" href="#projects">Projects</a>
+					<a className="menu-link" href="#projects" onClick={() => closeMenu()}>Projects</a>
 				</li>
 				<li className="menu-item">
-					<a className="menu-link" href="#blog">Blog</a>
+					<a className="menu-link" href="#blog" onClick={() => closeMenu()}>Blog</a>
 				</li>
 			</ul>
 			<ul className="nav-item menu menu-btns" aria-label="site settings">
