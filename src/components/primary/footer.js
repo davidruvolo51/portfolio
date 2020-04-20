@@ -2,7 +2,7 @@
 // FILE: footer.js
 // AUTHOR: David Ruvolo
 // CREATED: 2019-10-25
-// MODIFIED: 2020-02-29
+// MODIFIED: 2020-04-20
 // PURPOSE: footer component
 // DEPENDENCIES: react, footer.scss, nav, twitter icon, github icon
 // STATUS: working 
@@ -12,25 +12,32 @@
 import React from "react"
 import Twitter from "../images/twitter"
 import Github from "../images/github"
-function Footer(){
-  return (
-    <footer className="footer">
-      <h2>@dcruvolo</h2>
-      <ul className="menu footer-menu">
-        <li className="menu-item">
-          <a className="menu-link" href="https://www.twitter.com/dcruvolo">
-            <Twitter className="menu-link-icon icon" />
-            @dcruvolo
-          </a>
-        </li>
-        <li className="menu-item">
-          <a className="menu-link" href="https://github.com/davidruvolo51">
-            <Github className="menu-link-icon icon" />
-            @davidruvolo51
-          </a>
-        </li>
-      </ul>
-    </footer>
-  )
+import Linkedin from "../images/linkedin"
+function Footer() {
+	return (
+		<footer className="footer">
+			<h2>@dcruvolo</h2>
+			<ul className="menu footer-menu">
+				<li className="menu-item">
+					<a className="menu-link" href="https://github.com/davidruvolo51">
+						<Github className="menu-link-icon" />
+            			@davidruvolo51
+          			</a>
+				</li>
+				<li className="menu-item">
+					<a className="menu-link" href="https://www.twitter.com/dcruvolo">
+						<Twitter className="menu-link-icon" />
+            			@dcruvolo
+          			</a>
+				</li>
+				<li className="menu-item">
+					<a className="menu-link" href="https://www.linkedin.com/in/david-ruvolo-5419a51a1/">
+						<Linkedin className="menu-link-icon"/>
+						@davidruvolo
+					</a>
+				</li>
+			</ul>
+		</footer>
+	)
 }
 export default Footer

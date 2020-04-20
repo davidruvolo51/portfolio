@@ -2,7 +2,7 @@
 // FILE: app.js
 // AUTHOR: David Ruvolo
 // CREATED: 2020-02-29
-// MODIFIED: 2020-03-13
+// MODIFIED: 2020-04-20
 // PURPOSE: functional component for portfolio
 // DEPENDENCIES: react
 // STATUS: working
@@ -219,7 +219,9 @@ function app() {
                             />
                         </Grid>
                         )
-                        : null
+                        : (
+                            <p>Unable to retrieve recent blog posts.</p>
+                        )
                     }
                 </Section>
             </Main>
