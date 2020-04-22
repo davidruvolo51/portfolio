@@ -2,7 +2,7 @@
 // FILE: app.js
 // AUTHOR: David Ruvolo
 // CREATED: 2020-02-29
-// MODIFIED: 2020-04-20
+// MODIFIED: 2020-04-22
 // PURPOSE: functional component for portfolio
 // DEPENDENCIES: react
 // STATUS: working
@@ -31,47 +31,48 @@ ReactGA.timing({
     label: 'CDN libs'
   });
 
-// define app
-function app() {
+// functions
+function dive(currentKey, into, target) {
+    for (var i in into) {
+        if (into.hasOwnProperty(i)) {
+            var newKey = i;
+            var newVal = into[i];
 
-    // from:
-    function dive(currentKey, into, target) {
-        for (var i in into) {
-            if (into.hasOwnProperty(i)) {
-                var newKey = i;
-                var newVal = into[i];
+            if (currentKey.length > 0) {
+                newKey = "post_" + currentKey + '_' + i;
+            }
 
-                if (currentKey.length > 0) {
-                    newKey = "post_" + currentKey + '_' + i;
-                }
-
-                if (typeof newVal === "object") {
-                    dive(newKey, newVal, target);
-                } else {
-                    target[newKey] = newVal;
-                }
+            if (typeof newVal === "object") {
+                dive(newKey, newVal, target);
+            } else {
+                target[newKey] = newVal;
             }
         }
     }
+}
 
-    function flatten(arr) {
-        var newObj = {};
-        dive("", arr, newObj);
-        return newObj;
-    }
+function flatten(arr) {
+    var newObj = {};
+    dive("", arr, newObj);
+    return newObj;
+}
 
-    // remove CDATA from text string
-    function parseCDATA(string) {
-        return string.substring(
-            string.indexOf("<![CDATA[") + 9,
-            string.indexOf("]]>")
-        );
-    }
+// remove CDATA from text string
+function parseCDATA(string) {
+    return string.substring(
+        string.indexOf("<![CDATA[") + 9,
+        string.indexOf("]]>")
+    );
+}
 
-    // format time
-    function formatDate(string) {
-        return new Date(string).toLocaleString("en-GB", { day: "numeric", date: "2-digit", month: "short", year: "numeric"});
-    }
+// format time
+function formatDate(string) {
+    return new Date(string).toLocaleString("en-GB", { day: "numeric", date: "2-digit", month: "short", year: "numeric"});
+}
+
+
+// define app
+function app() {
 
     // set state
     const [posts, setPosts] = useState("");
@@ -142,40 +143,48 @@ function app() {
                             title="shinyTravel"
                             abstract="I built an app for the shiny 2020 contest that provides European travel destinations."
                             link="https://davidruvolo.shinyapps.io/travel-app/"
-                            linkLabel="View App"
-                            keywords={["shiny", "d3"]}
+                            linkLabel="View"
+                            keywords={["shinyapp"]}
                         />
                         <Card
                             id="project-shiny-tutorials"
                             title="Shiny Tutorials"
                             abstract="I started a blog where I write about building and designing shinyapps and other fun R things."
                             link="https://davidruvolo51.github.io/shinytutorials/"
-                            linkLabel="Visit"
-                            keywords={["shiny"]}
+                            linkLabel="View"
+                            keywords={["blog"]}
                         />
                         <Card
                             id="project-accessible-shiny"
                             title="Accessible Shiny"
                             abstract="I'm developing an R package for building web accessible shiny applications."
                             link="https://github.com/davidruvolo51/accessibleshiny"
-                            linkLabel="View Code"
-                            keywords={["r", "shiny", "a11y"]}
+                            linkLabel="View"
+                            keywords={["r-pkg"]}
+                        />
+                        <Card
+                            id = "project-browsertools"
+                            title = "browsertools"
+                            abstract = "I am working on bundling JavaScript handlers into a package for use in shiny apps."
+                            link = "https://github.com/davidruvolo51/browsertools"
+                            linkLabel = "View"
+                            keywords={["r-pkg"]}
                         />
                         <Card
                             id="project-r-react"
                             title="R + Node + React"
                             abstract="I built an app to demonstrate how to link R with node, express, and react."
                             link="https://github.com/davidruvolo51/r-react-demo"
-                            linkLabel="View Code"
-                            keywords={["r", "node", "react"]}
+                            linkLabel="View"
+                            keywords={["r", "app"]}
                         />
                         <Card
                             id="project-r-plumber"
                             title="R + Plumber + React"
                             abstract="I developed an app that uses R Plumber as a backend and React as the client."
                             link="https://github.com/davidruvolo51/r-plumber-app"
-                            linkLabel="View Code"
-                            keywords={["r", "plumber"]}
+                            linkLabel="View"
+                            keywords={["r", "app"]}
                         />
                     </Grid>
                 </Section>

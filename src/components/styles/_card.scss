@@ -40,6 +40,10 @@ $card-link-txt-color: $dark;
             font-size: 12pt;
             border-radius: 6px;
             font-family: 'Courier New', Courier, monospace;
+
+            &::before {
+                content: "#";
+            }
             
             &:last-child {
                 margin-right: 0;
