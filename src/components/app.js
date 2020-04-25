@@ -186,6 +186,14 @@ function app() {
                             linkLabel="View"
                             keywords={["r", "app"]}
                         />
+                        <Card 
+                            id="project-r-shiny-template"
+                            title = "Shiny App Template"
+                            abstract="I put together my standard tools into a template that uses parceljs and npm packages."
+                            link="https://github.com/davidruvolo51/shiny-app-template"
+                            linkLabel="View"
+                            keywords={["r", "app"]}
+                        />
                     </Grid>
                 </Section>
                 <Section id="blog" aria-labelledby="blog-section-title">
