@@ -2,12 +2,11 @@
   "name": "davidruvolo51.github.io",
   "homepage": "https://davidruvolo51.github.io/portfolio/",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "license": "MIT",
   "dependencies": {
-    "@babel/runtime": "^7.8.7",
+    "@babel/runtime": "^7.9.6",
     "async_hooks": "^1.0.0",
-    "cssnano": "^4.1.10",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -17,32 +16,22 @@
     "rss-parser": "^3.7.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-runtime": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
-    "sass": "^1.26.3"
+    "cssnano": "^4.1.10",
+    "parcel": "^1.12.4",
+    "postcss-modules": "^2.0.0",
+    "sass": "^1.26.5"
   },
   "scripts": {
-    "dev": "NODE_ENV=development parcel src/index.html",
-    "build": "NODE_ENV=production parcel build src/index.html --public-url ./ --out-dir docs",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./ --out-dir docs",
     "serve": "cd docs && python -m SimpleHTTPServer",
-    "clean": "rm -rf dist docs .cache"
-  },
-  "postcss": {
-    "modules": false,
-    "plugins": {
-      "autoprefixer": {
-        "overrideBrowserslist": [
-          ">1%",
-          "last 4 versions",
-          "Firefox ESR",
-          "not ie < 9"
-        ],
-        "flexbox": "no-2009"
-      }
-    }
+    "clean": "rm -rf dist docs .cache .parcel-cache"
   },
   "bugs": {
     "url": "https://davidruvolo51.github.io/portfolio/issues"

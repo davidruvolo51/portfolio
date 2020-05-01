@@ -72,7 +72,7 @@ function formatDate(string) {
 
 
 // define app
-function app() {
+function App() {
 
     // set state
     const [posts, setPosts] = useState("");
@@ -248,4 +248,4 @@ function app() {
 }
 
 // export
-export default app;
+export default App
