@@ -19,6 +19,7 @@ import Section from "./layouts/section"
 import Profile from "./images/profile"
 import Grid from "./layouts/grid"
 import Card from "./elements/card"
+import List from "./elements/list"
 import "../components/styles/index.scss"
 
 // google analytics
@@ -129,14 +130,14 @@ function App() {
                 </Hero>
                 <Section id="welcome" aria-labelledby="welcome-section-title" >
                     <h2 id="welcome-section-title">Welcome!</h2>
-                    <p>I'm a Gerontologist by training with an emphasis in aging and Alzheimer's disease research. I've worked on a handful of small cohort studies and large international clinical trials.</p>
+                    <p>I'm a Gerontologist by training with an emphasis on aging and Alzheimer's disease research. I've worked on a handful of cohort studies and large international clinical trials.</p>
                     <p>I caught the programming bug when I worked on a small study where I was introduced to R and E-Prime. I designed a computerized battery for use in clinical evaluation and fMRI tasks, and then analyzed the data in R. I was hooked immediately.</p>
                     <p>More recently, I've been building web-based applications that communicate research results using interactive visualizations. I'm also interested in building web apps for use in research and in the patient-centered healthcare decision making process. My favorite tools are R's Shiny apps framework, React, Node, and D3.</p>
                     <p>When I'm not behind the monitor, I'm usually out for a run, enjoying a nice cup of coffee, or cooking.</p>
                 </Section>
                 <Section id="projects" aria-labelledby="projects-section-title">
                     <h2 id="projects-section-title">Projects</h2>
-                    <p>Here are some of projects that I'm working on.</p>
+                    <p>Here are some of the projects on which I'm working.</p>
                     <Grid id="projects-layout" layout="33x3">
                         <Card
                             id="project-shiny-contest"
@@ -157,7 +158,7 @@ function App() {
                         <Card
                             id="project-accessible-shiny"
                             title="Accessible Shiny"
-                            abstract="I'm developing an R package for building web accessible shiny applications."
+                            abstract="I'm developing an R package for building accessible shiny applications."
                             link="https://github.com/davidruvolo51/accessibleshiny"
                             linkLabel="View"
                             keywords={["r-pkg"]}
@@ -189,7 +190,7 @@ function App() {
                         <Card 
                             id="project-r-shiny-template"
                             title = "Shiny App Template"
-                            abstract="I put together my standard tools into a template that uses parceljs and npm packages."
+                            abstract="I combined my favorite tools into a template that uses parceljs and npm packages."
                             link="https://github.com/davidruvolo51/shiny-app-template"
                             linkLabel="View"
                             keywords={["r", "app"]}
@@ -240,6 +241,27 @@ function App() {
                             <p>Unable to retrieve recent blog posts.</p>
                         )
                     }
+                </Section>
+                <Section id="research" aria-labelledby="research-section-title">
+                    <h2 id="research-section-title">Research</h2>
+                    <p>My publications and conferences are listed below. You can view more information about my publications on <a href="https://orcid.org/0000-0002-5745-5298">ORCID</a> and <a href="https://www.scopus.com/authid/detail.uri?authorId=56659487600">Scopus</a>.</p>
+                    <h3>Publications</h3>
+                    <List id ="publication-history" data={[
+                        "<span>3.</span><span>Henshall, C., Cipriani, A., <strong>Ruvolo, D.</strong>, Macdonald, O., Wolters, L., & Koychev, I. (2019). Implementing a digital clinical decision support tool for side effects of antipsychotics: a focus group study. <em>Evidence-Based Mental Health</em> (22), 56-60. <a href='http://dx.doi.org/10.1136/ebmental-2019-300086'>http://dx.doi.org/10.1136/ebmental-2019-300086</a>.</span>",
+                        "<span>2.</span><span>McDaniel, M., Cahill, M., Frey, R., Rauch, M., Doele, J., <strong>Ruvolo, D.</strong>, & Daschbach, M. (2018). Individual learning differences in learning examplars versus abstracting rules: Associations with exam performances in college science. <em>Journal of Applied Research in Memory and Cognition</em> (7), 241-251. <a href='https://doi.org/10.1016/j.jarmac.2017.11.004'>https://doi.org/10.1016/j.jarmac.2017.11.004</a>.</span>",
+                        "<span>1.</span><span>Hassenstab, J., <strong>Ruvolo, D.</strong>, Jalzielec, M., Xiong, C., Grant, E., & Morris, J.C. (2015). Absence of practice effects in preclinical Alzheimer's disease. <em>Neuropsychology, 29</em> (6),940-948. <a href='http://dx.doi.org/10.1037/neu0000208'>http://dx.doi.org/10.1037/neu0000208</a>.</span>",
+                    ]}/>
+                    <h3>Conferences</h3>
+                    <List id="conference-history" threshold={5} data={[
+                        "<span>8.</span><span>McDaniel, M., Frey, R., Cahill, M., <strong>Ruvolo, D.</strong>, and Rauch, M. (November 2015). Individual differences in learning exemplars versus abstracting rules: Influences on authentic classroom outcomes. The Center for Integrative Research on Cognition, Learning, and Education (CIRCLE); Washington University, St. Louis, MO USA.</span>",
+                        "<span>7.</span><span>Halliday, A., <strong>Ruvolo, D.</strong>, Huibers, A., on behalf of ACST-2 Collaborators (April 2015). Higher stroke risk patients with previous symptoms and cerebral infarction in the ACST-2 trial. Abstract presentation at European Stroke Organisation Conference; Glasgow, UK.</span>",
+                        "<span>6.</span><span><strong>Ruvolo, D.</strong>, & Hassenstab, J. (September 2013). Practice effects and pre-clinical Alzheimer's disease. Oral presentation at the Knight Alzheimer's Disease Research Center weekly Research Seminar; Washington University School of Medicine, St. Louis, MO USA.</span>",
+                        "<span>5.</span><span><strong>Ruvolo, D.</strong>, Chasse, R., Vernon, E., Maue Dreyfus, D., Grant, E., Morris, J.C., & Hassenstab, J. (July 2013). Attenuation of practice effects is a potential marker of pre-clinical Alzheimer's disease. Abstract presentation at the Alzheimer's Association International Conference; Boston, MA USA.</span>",
+                        "<span>4.</span><span><strong>Ruvolo, D.</strong>, Dorothy, E., Brown, D., & Williams, M. (November 2012). A community-based model for recruitment of African Americans into Alzheimer's research. Accepted for abstract presentation at the Gerontological Society of America annual conference; San Diego, CA USA.</span>",
+                        "<span>3.</span><span><strong>Ruvolo, D.</strong>, Dorothy, E., Brown, D., & Williams, M. (September 2012). A community-based model for recruitment of African Americans into Alzheimer's research. Abstract presentation at the 8th Leonard Berg Symposium Prevention of Alzheimer's Disease: Current Considerations; Washington University School of Medicine, St. Louis, MO USA.</span>",
+                        "<span>2.</span><span><strong>Ruvolo, D.</strong> (April 2011). Assessment for Readiness in Mobility Transition (ARMT): Case studies. Oral presentation at The Successful Mobility Transition in Late Life Expert Panel; St. Louis University, St. Louis, MO USA.</span>",
+                        "<span>1.</span><span><strong>Ruvolo, D.</strong>, Willis, E., Norsic, J., & Sprong, M. (March 2009). Social anxiety: A moderating variable between daily hassles and working memory. Abstract presented at Midwestern Psychological Association annual meeting; Chicago, IL USA.</span>"
+                    ]} />
                 </Section>
             </Main>
             <Footer />

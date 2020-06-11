@@ -44,9 +44,9 @@ li {
 }
 
 a {
-	color: $primary;
+	color: currentColor;
 	text-decoration: none;
-	box-shadow: 0 1px 0 $primary;
+	box-shadow: 0 2px 0 currentColor;
 }
 
 button {

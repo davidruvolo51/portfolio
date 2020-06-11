@@ -48,10 +48,14 @@ function Header() {
 				<li className="menu-item">
 					<a className="menu-link" href="#blog" onClick={() => closeMenu()}>Blog</a>
 				</li>
+				<li className="menu-item">
+					<a className="menu-link" href="#research" onClick={() => closeMenu()}>Research</a>
+				</li>
 			</ul>
 			<ul className="nav-item menu menu-btns" aria-label="site settings">
 				<li className="menu-item menu-button">
-					<button id="menuBtn" aria-label="open and close menu" className={isOpen ? "open" : ''} aria-expanded={isOpen ? "true" : "false"} onClick={() => setMenu(!isOpen)}>
+					<button id="menuBtn" className={isOpen ? "open" : ''} aria-expanded={isOpen ? "true" : "false"} onClick={() => setMenu(!isOpen)}>
+						<span className="visually-hidden">open and close menu</span>
 						<span className="menu-icon" aria-hidden="true">
 							<span className="menu-bar"></span>
 							<span className="menu-bar"></span>

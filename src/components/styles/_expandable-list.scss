@@ -1,0 +1,48 @@
+.expandable-list {
+    padding: 0;
+    margin-bottom: 16px;
+    list-style: none;
+
+    .list-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 18px;
+
+        span {
+            background-origin: padding-box;
+            padding: 0 10px;
+        }
+
+        strong {
+            font-weight: 800;
+        }
+
+        a {
+            color: $text;
+            box-shadow: inset 0 -2px 0 0 $text;
+        }
+    }
+}
+
+.expandable-list-button {
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    span {
+        color: $blue;
+        font-size: 11pt;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 4px;
+    }
+
+    &:hover {
+        span {
+            box-shadow: inset 0 -2px 0 0 currentColor;
+        }
+    }
+}

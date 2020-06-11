@@ -1,5 +1,15 @@
 @use "sass:color";
-@import "_variables", "_fonts", "_base", "_grid", "_footer", "_hero", "_main", "_menuBtn", "_nav", "_navigation-links", "_card";
+@import "_variables", "_fonts", "_base", "_grid", "_footer", "_hero", "_main", "_menuBtn", "_nav", "_navigation-links", "_card", "_expandable-list", "_accordion";
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	clip: rect(0, 0, 0, 0);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
 
 .icon {
 	width: 20px;
