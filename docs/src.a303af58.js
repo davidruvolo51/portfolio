@@ -93,4 +93,4 @@ module.exports={grid:"grid","grid-child":"grid-child","grid-33x3-layout":"grid-3
 },{"@babel/runtime/regenerator":"PMvg","@babel/runtime/helpers/asyncToGenerator":"agGE","@babel/runtime/helpers/slicedToArray":"HETk","@babel/runtime/helpers/typeof":"b9XL","react":"n8MK","react-ga":"gbPU","./primary/header":"ce2Z","./primary/footer":"jnyh","./layouts/hero":"kOK6","./layouts/main":"yR0v","./layouts/section":"pjyq","./images/profile":"JkVU","./layouts/grid":"gii9","./elements/card":"tR9k","./elements/list":"yj1o","../components/styles/index.scss":"SKtp"}],"Focm":[function(require,module,exports) {
 "use strict";var e=u(require("react")),t=u(require("react-dom")),r=u(require("./components/app"));function u(e){return e&&e.__esModule?e:{default:e}}t.default.render(e.default.createElement(r.default,null),document.getElementById("root"));
 },{"react":"n8MK","react-dom":"NKHc","./components/app":"d8kw"}]},{},["Focm"], null)
-//# sourceMappingURL=src.1c95f93d.js.map
+//# sourceMappingURL=src.a303af58.js.map
