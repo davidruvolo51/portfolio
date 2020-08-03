@@ -8,3 +8,6 @@ sass_cache/
 # remove application cache
 .cache/
 .parcel-cache/
+
+# ignore lock files
+package-lock.json
