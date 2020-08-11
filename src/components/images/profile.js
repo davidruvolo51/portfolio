@@ -1,9 +1,10 @@
 import React from "react"
-function profile() {
+function profile(props) {
     return (
         <svg id="profile-illustration" width="784px" height="1100px" viewBox="0 0 784 1100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <title>profile</title>
             <desc>Created with Sketch.</desc>
+            { props.children ? props.children : null}
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="profile" transform="translate(-108.000000, -169.000000)">
                     <g transform="translate(108.000000, 169.000000)">

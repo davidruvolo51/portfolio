@@ -2,7 +2,7 @@
 // FILE: app.js
 // AUTHOR: David Ruvolo
 // CREATED: 2020-02-29
-// MODIFIED: 2020-04-22
+// MODIFIED: 2020-08-11
 // PURPOSE: functional component for portfolio
 // DEPENDENCIES: react
 // STATUS: working
@@ -119,7 +119,6 @@ function App() {
             <Header />
             <Main>
                 <Hero id="intro">
-                    <Profile />
                     <h1>@dcruvolo</h1>
                     <ul>
                         <li>Gerontologist</li>
@@ -127,6 +126,9 @@ function App() {
                         <li>data viz</li>
                         <li>web dev</li>
                     </ul>
+                    <Profile>
+                        <circle cx="600" cy="800" r="125" fill="hsl(218, 42%, 52%)"></circle>
+                    </Profile>
                 </Hero>
                 <Section id="welcome" aria-labelledby="welcome-section-title" >
                     <h2 id="welcome-section-title">Welcome!</h2>
@@ -139,14 +141,6 @@ function App() {
                     <h2 id="projects-section-title">Projects</h2>
                     <p>Here are some of the projects on which I'm working.</p>
                     <Grid id="projects-layout" layout="33x3">
-                        <Card
-                            id="project-shiny-contest"
-                            title="shinyTravel"
-                            abstract="I built an app for the shiny 2020 contest that provides European travel destinations."
-                            link="https://davidruvolo.shinyapps.io/travel-app/"
-                            linkLabel="View"
-                            keywords={["shinyapp"]}
-                        />
                         <Card
                             id="project-shiny-tutorials"
                             title="Shiny Tutorials"
@@ -194,6 +188,14 @@ function App() {
                             link="https://github.com/davidruvolo51/shiny-app-template"
                             linkLabel="View"
                             keywords={["r", "app"]}
+                        />
+                        <Card
+                            id="project-shiny-contest"
+                            title="shinyTravel"
+                            abstract="I built an app for the shiny 2020 contest that provides European travel destinations."
+                            link="https://davidruvolo.shinyapps.io/travel-app/"
+                            linkLabel="View"
+                            keywords={["shinyapp"]}
                         />
                     </Grid>
                 </Section>
