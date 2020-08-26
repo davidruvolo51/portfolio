@@ -1,14 +1,13 @@
 .footer {
 	margin: 0;
 	padding: 62px 0;
-	background-color: $dark;
 
 	h2 {
 		display: block;
 		width: 85%;
 		margin: 0 auto;
 		padding-top: 12px;
-		color: $light;
+		color: currentColor;
 		letter-spacing: 2.5px;
 	}
 
@@ -20,19 +19,20 @@
 
 		.menu-item {
 			margin-right: 24px;
+			color: currentColor;
 
 			.menu-link {
-				color: $light;
+				color: currentColor;
 				box-shadow: none;
 
 				.menu-link-icon {
 					path {
-						fill: $light;
+						fill: currentColor;
 					}
 				}
 
 				&:hover {
-					border-bottom-color: $light;
+					border-bottom-color: currentColor;
 				}
 			}
 		}

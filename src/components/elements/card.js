@@ -34,7 +34,7 @@ function card(props) {
 
     // return component
     return (
-        <section id={props.id ? props.id : null} className={css_type} aria-labelledby={props.title} key={props.id ? props.id : null}>
+        <section id={props.id ? props.id : null} className={css_type} key={props.id ? props.id : null}>
             {
                 // should an image by rendered
                 props.img
@@ -46,17 +46,21 @@ function card(props) {
             {
                 // should a link be rendered
                 props.titleIsLink
-                    ? (
-                        <h3 id={props.title} className="card-title-link">
-                            <a href={props.link}>{props.title}</a>
-                        </h3>
-                    )
-                    : (
-                        <h3 id={props.title} className="card-title">{props.title}</h3>
-                    )
+                    ? <h3 className="card-title-link">
+                        <a href={props.link}>{props.title}</a>
+                    </h3>
+                    : <h3 className="card-title">{props.title}</h3>
             }
-            <time className="card-date">{props.date}</time>
-            <p className="card-desc">{props.abstract}</p>
+            {
+                props.date
+                ? <time className="card-date">{props.date}</time>
+                : null
+            }
+            {
+                props.abstract
+                ? <p className="card-desc">{props.abstract}</p>
+                : null
+            }
             {
                 props.keywords
                     ? (

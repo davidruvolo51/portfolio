@@ -1,4 +1,4 @@
-#menuBtn {
+.menu-toggle {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -9,6 +9,7 @@
 	-ms-flex-align: center;
 	align-items: center;
 	background-color: transparent;
+	color: transparent;
 	
 	.menu-icon {
 		display: block;
@@ -21,7 +22,7 @@
 			width: 30px;
 			border-radius: 6px;
 			margin-bottom: 6px;
-			background-color: $light;
+			background-color: currentColor;
 			-webkit-transition: all 0.2s ease-in-out;
 			-o-transition: all 0.2s ease-in-out;
 			transition: all 0.2s ease-in-out;
@@ -37,7 +38,7 @@
 		position: relative;
 		margin-top: 6px;
 		margin-right: 8px;
-		color: $light;
+		color: currentColor;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		font-weight: bold;
@@ -57,7 +58,7 @@
 			-webkit-transform-origin: center 0.5px;
 			-ms-transform-origin: center 0.5px;
 			transform-origin: center 0.5px;
-			background-color: $light;
+			background-color: currentColor;
 		}
 
 		.menu-bar:nth-child(3) {
@@ -67,11 +68,11 @@
 			-webkit-transform-origin: 24.85px -2.5px;
 			-ms-transform-origin: 24.85px -2.5px;
 			transform-origin: 24.85px -2.5px;
-			background-color: $light;
+			background-color: currentColor;
 		}
 
 		.menu-label {
-			color: $light;
+			color: currentColor;
 		}
 	}
 }

@@ -34,7 +34,7 @@ function Header() {
 
 	// render
 	return (
-		<nav className="nav" role="navigation">
+		<nav id="navbar" className="nav" role="navigation">
 			<a to="/" className="nav-item brand-link">
 				@dcruvolo
       			</a>
@@ -54,7 +54,7 @@ function Header() {
 			</ul>
 			<ul className="nav-item menu menu-btns" aria-label="site settings">
 				<li className="menu-item menu-button">
-					<button id="menuBtn" className={isOpen ? "open" : ''} aria-expanded={isOpen ? "true" : "false"} onClick={() => setMenu(!isOpen)}>
+					<button id="menuBtn" className={`menu-toggle ${isOpen ? "open" : ''}`} aria-expanded={isOpen ? "true" : "false"} onClick={() => setMenu(!isOpen)}>
 						<span className="visually-hidden">open and close menu</span>
 						<span className="menu-icon" aria-hidden="true">
 							<span className="menu-bar"></span>

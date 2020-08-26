@@ -16,7 +16,7 @@
 			font-size: 11pt;
 			letter-spacing: 2px;
 			font-weight: 600;
-			color: $primary;
+			// color: $primary;
 			padding-bottom: 4px;
 			border-bottom: 2px solid transparent;
 
@@ -26,12 +26,12 @@
 				top: 4px;
 
 				path {
-					fill: $primary;
+					// fill: $primary;
 				}
 			}
 
 			&:hover {
-				border-bottom-color: $primary;
+				// border-bottom-color: $primary;
 			}
 		}
 	}

@@ -2,7 +2,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "Open Sans", Helvetical, sans-serif;
+	font-family: "Open Sans", Helvetica, sans-serif;
 	cursor: default;
 	font-size: 16pt;
 }
@@ -23,7 +23,7 @@ h4,
 h5,
 h6 {
 	display: block;
-	color: $dark;
+	color: $cool-grey-900;
 	line-height: $heading-line-height;
 	margin: 0;
 	padding: 0;
@@ -31,7 +31,7 @@ h6 {
 }
 
 p {
-	color: $text;
+	color: $cool-grey-800;
 	line-height: $body-line-height;
 	padding: 0;
 	margin: 0;
@@ -39,7 +39,7 @@ p {
 }
 
 li {
-	color: $text;
+	color: $cool-grey-800;
 	line-height: $heading-line-height;
 }
 

@@ -115,21 +115,21 @@ function App() {
     // Render
     return (
         <>
-            <a className="screen-reader-text" href="main">got to main content</a>
+            <a className="visually-hidden" href="main">got to main content</a>
             <Header />
+            <Hero id="profile">
+                <h1>@dcruvolo</h1>
+                <ul>
+                    <li>Gerontologist</li>
+                    <li>#rstats</li>
+                    <li>data viz</li>
+                    <li>web dev</li>
+                </ul>
+                <Profile>
+                    <circle cx="600" cy="800" r="125" fill="hsl(218, 42%, 52%)"></circle>
+                </Profile>
+            </Hero>
             <Main>
-                <Hero id="intro">
-                    <h1>@dcruvolo</h1>
-                    <ul>
-                        <li>Gerontologist</li>
-                        <li>#rstats</li>
-                        <li>data viz</li>
-                        <li>web dev</li>
-                    </ul>
-                    <Profile>
-                        <circle cx="600" cy="800" r="125" fill="hsl(218, 42%, 52%)"></circle>
-                    </Profile>
-                </Hero>
                 <Section id="welcome" aria-labelledby="welcome-section-title" >
                     <h2 id="welcome-section-title">Welcome!</h2>
                     <p>I'm a Gerontologist by training with an emphasis on aging and Alzheimer's disease research. I've worked on a handful of cohort studies and large international clinical trials.</p>
@@ -234,8 +234,9 @@ function App() {
                             />
                             <Card 
                                 id="blog-read-more"
+                                title="Read More @"
                                 link="https://davidruvolo51.github.io/shinytutorials/"
-                                linkLabel="Read More >"
+                                linkLabel="shinytutorials blog"
                             />
                         </Grid>
                         )

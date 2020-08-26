@@ -2,8 +2,6 @@
   "name": "davidruvolo51.github.io",
   "homepage": "https://davidruvolo51.github.io/portfolio/",
   "version": "1.0.0",
-  "private": true,
-  "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.9.6",
     "async_hooks": "^1.0.0",

@@ -1,21 +1,15 @@
-// local variables for ease
-$card-tags-bg-color: $light;
-$card-date-bg-color: $light;
-$card-link-bg-color: $light;
-$card-link-txt-color: $dark;
-
 // define card style
 .card {
     padding: 1em;
     border-radius: 6px;
-    background-color: white;
+    background-color: #ffffff;
 
     // date
     .card-date {
         display: block;
         margin: 0;
         margin-bottom: 4px;
-        color: $text;
+        color: currentColor;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 11pt;
@@ -36,7 +30,7 @@ $card-link-txt-color: $dark;
         li {
             padding: 0 8px;
             margin-right: 12px;
-            background-color: $card-tags-bg-color;
+            background-color: $purple-050;
             font-size: 12pt;
             border-radius: 6px;
             font-family: 'Courier New', Courier, monospace;
@@ -65,8 +59,14 @@ $card-link-txt-color: $dark;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: bold;
-        color: $card-link-txt-color;
-        border: 2px solid $card-link-bg-color;
-        background-color: $card-link-bg-color;
+        color: $light-blue-050;
+        background-color: $light-blue-800;
+        border: 2px solid $light-blue-800;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+            background-color: transparent;
+            color: $light-blue-800;
+        }
     }
 }
