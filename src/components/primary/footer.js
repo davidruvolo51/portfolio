@@ -2,7 +2,7 @@
 // FILE: footer.js
 // AUTHOR: David Ruvolo
 // CREATED: 2019-10-25
-// MODIFIED: 2020-04-20
+// MODIFIED: 2020-09-08
 // PURPOSE: footer component
 // DEPENDENCIES: react, footer.scss, nav, twitter icon, github icon
 // STATUS: working 
@@ -31,7 +31,7 @@ function Footer() {
           			</a>
 				</li>
 				<li className="menu-item">
-					<a className="menu-link" href="https://www.linkedin.com/in/david-ruvolo-5419a51a1/">
+					<a className="menu-link" href="https://www.linkedin.com/in/davidcruvolo/">
 						<Linkedin className="menu-link-icon"/>
 						@davidruvolo
 					</a>
