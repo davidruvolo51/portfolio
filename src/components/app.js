@@ -20,7 +20,6 @@ import Profile from "./images/profile"
 import Grid from "./layouts/grid"
 import Card from "./elements/card"
 import List from "./elements/list"
-import "../components/styles/index.scss"
 
 // google analytics
 ReactGA.initialize("UA-76117337-12");
