@@ -8,8 +8,6 @@
         "serve": "http-server docs/ --port 9000 -o",
         "clean": "rm -rf dist docs"
     },
-    "dev": "dist/index.html",
-    "prod": "docs/index.html",
     "targets": {
         "main": false,
         "dev": {
@@ -19,21 +17,20 @@
         },
         "prod": {
             "distDir": "docs",
-            "publicUrl": ".",
-            "sourceMap": false
+            "publicUrl": "."
         }
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.10.2",
+        "react-ga": "^2.7.0",
+        "rss-parser": "^3.7.5"
     },
     "devDependencies": {
         "autoprefixer": "^9.8.6",
         "parcel": "^2.0.0-beta.1",
-        "postcss-modules": "^3.2.2",
-        "prop-types": "^15.7.2",
-        "react": "^16.10.2",
-        "react-dom": "^16.10.2",
-        "react-ga": "^2.7.0",
-        "react-markdown": "^4.2.2",
-        "react-router-dom": "^5.1.2",
-        "rss-parser": "^3.7.5"
+        "postcss-modules": "^3.2.2"
     },
     "bugs": {
         "url": "https://davidruvolo51.github.io/portfolio/issues"
