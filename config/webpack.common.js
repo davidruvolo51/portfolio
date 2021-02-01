@@ -2,7 +2,7 @@
 // FILE: webpack.common.js
 // AUTHOR: David Ruvolo
 // CREATED: 2020-09-26
-// MODIFIED: 2020-09-26
+// MODIFIED: 2021-02-01
 // PURPOSE: configuration to be used in prod and dev
 // DEPENDENCIES: see below
 // STATUS: working
@@ -22,8 +22,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: "./src/index.js",
     output: {
+        publicPath: "",
         path: path.resolve(__dirname, "..", "docs/"),
-        filename: "portfolio.js",
+        filename: "portfolio.[contenthash].js"
     },
     plugins: [
         new webpack.ProgressPlugin(),
@@ -48,7 +49,7 @@ module.exports = {
             filename: "index.html",
         }),
         new MiniCssExtractPlugin({
-            filename: "portfolio.css",
+            filename: "portfolio.[contenthash].css"
         }),
         new CleanWebpackPlugin(),
     ],

@@ -2,15 +2,12 @@
 // FILE: webpack.dev.js
 // AUTHOR: David Ruvolo
 // CREATED: 2020-09-26
-// MODIFIED: 2020-09-26
+// MODIFIED: 2021-02-01
 // PURPOSE: configuration for dev
 // DEPENDENCIES: see below and common
 // STATUS: working
 // COMMENTS: NA
 ////////////////////////////////////////////////////////////////////////////////
-
-// plugins
-const path = require("path");
 
 // config
 module.exports = {
